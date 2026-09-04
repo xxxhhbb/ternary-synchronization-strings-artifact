@@ -1,7 +1,7 @@
-"""High-precision audit for the local-entropy transfer theorem.
+"""Numerical bounds for the local-entropy transfer theorem.
 
-This script checks the transparent 18-uniform, two-choice ternary instance.
-It is an auxiliary audit and is not invoked by the paper's proof.
+Checks the 18-uniform, two-choice ternary instance using 100-digit
+decimal arithmetic.
 """
 
 from decimal import Decimal, getcontext
@@ -57,4 +57,4 @@ for name, passed in checks.items():
     print(f"{name:24s}: {'PASS' if passed else 'FAIL'}")
 
 if not all(checks.values()):
-    raise SystemExit("entropy-transfer audit failed")
+    raise SystemExit("entropy-transfer check failed")

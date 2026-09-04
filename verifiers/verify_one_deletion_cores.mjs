@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Independent JavaScript replay of the shrunk total-251 AC cores.
+// Verify arc inconsistency of the total-251 coordinate cores.
 
 import fs from "node:fs";
 
@@ -74,7 +74,7 @@ function arcInconsistent(blockCount, edges) {
 }
 
 if (process.argv.length !== 4) {
-  throw new Error("usage: node independent_verify_251_coordinate_cores.mjs SOURCE CORES");
+  throw new Error("usage: node verify_one_deletion_cores.mjs SOURCE CORES");
 }
 const source = fs.readFileSync(process.argv[2]);
 const words = source.toString("ascii").trimEnd().split(/\r?\n/);

@@ -1,6 +1,5 @@
 #!/usr/bin/env node
-// Independent JavaScript replay of a complete certified two-deletion shell.
-// It does not import or execute the Python producer.
+// Enumerate two-deletion cases at a specified total length.
 
 import fs from "node:fs";
 

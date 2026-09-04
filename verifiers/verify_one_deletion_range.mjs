@@ -1,6 +1,5 @@
 #!/usr/bin/env node
-// Independent JavaScript replay of a range of odd one-deletion shells.
-// It does not import or execute the Python producer.
+// Verify one-deletion certificates for a range of odd total lengths.
 
 import fs from "node:fs";
 import path from "node:path";
