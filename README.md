@@ -1,66 +1,60 @@
-# Synchronization Strings over the Optimal Alphabet
+# Verification for the supported-alignment strengthening
 
-Computational material accompanying *Synchronization Strings over the Optimal
-Alphabet*, by Huibo Xu, Shi Fu, Youming Qiao, and Dacheng Tao.
+This package accompanies *Synchronization Strings over the Optimal Alphabet*.
+It verifies the finite inputs and numerical local-lemma bounds for normalized
+edit-distance gap **1/216**, hence every synchronization parameter greater
+than **215/216** (in particular, **216/217**).
 
-The programs verify the finite-case lemmas and numerical inequalities used in
-the paper's quantitative refinement: ternary strings with a non-strict
-normalized edit-distance lower bound $1/227$, and hence synchronization parameter
-$\varepsilon>226/227$. They also verify the finite cases and local-lemma
-estimates for ternary $5201/5202$-synchronization circles of every length
-$n\ge10008$.
+## Running the checks
 
-## Mathematical computations
+Install Python 3.11 or later and Node.js 20 or later, then run:
 
-The denominator-227 local-lemma estimates are checked by two separate
-implementations using exact rational bounds. The finite enumeration covers
-$56{,}264{,}264$ one-deletion cases, represented by 118 certificates, and the
-two-deletion cases at total lengths 456, 462, and 464. Each certificate is
-checked against the codewords and the corresponding square-free contexts.
-
-The remaining programs check the six-codeword Brinkhuis family, coordinate
-cores for one-deletion constraints, phase recognition, and the circle-boundary
-templates. The circle local-lemma estimates are checked both by rational
-bounds and by high-precision arithmetic.
-
-The 54-uniform, 952-choice Brinkhuis family is taken from Sollami, Douglas,
-and Liebmann; its occurrence-wise square-free property is a published input
-to the proof. The reference and codeword extraction are described in
-[SOURCE.md](SOURCE.md). The paper's basic $2001/2002$ theorem does not depend
-on the large deletion certificates.
-
-## Reproducing the computations
-
-Python 3.11 or later and Node.js 20 or later are required. The programs use
-only the standard libraries. Run the commands below from the repository root;
-replace `python` by `python3` where appropriate.
-
-```sh
+```
 python verify.py
-python verify.py --full
 ```
 
-The first command runs the numerical estimates and small finite checks. The
-second also verifies all deletion certificates and enumerates the exceptional
-two-deletion cases. Successful completion of the full computation is reported
-as `ARTIFACT_FULL_REPLAY_PASS`; a failed check returns a nonzero exit status.
-The default and full runs took approximately 30 seconds and 29 minutes,
-respectively, in tests with Python 3.11.7 and Node.js 22.23.2 on Windows.
+Only the standard libraries are used. Any failed check exits unsuccessfully.
+The default run checks base certificate layout and coverage, runs its small
+finite checks, and recomputes the phase comparisons and both numerical
+bounds. It does not verify all deletion-certificate contents. To replay all
+base deletion-shell cases as well, run `python verify.py --full`; the base
+package reports a prior runtime of about 29 minutes. `--skip-base` runs the
+new checks alone and does not check the inherited finite-shell dependencies.
+Do not use Python's `-O` option,
+which disables assertions.
 
-The option `--verbose` displays the output of each verification program.
-For a preliminary check of the required files, parameters, codeword format,
-and certificate lengths and coverage, use `--integrity-only`. This option
-does not verify the mathematical content of the certificates and cannot be
-combined with `--full`. All options are listed by `--help`.
+## Contents and scope
 
-## Files
+- `base/` preserves the earlier verification package, including codeword
+  provenance, finite-shell certificates, and its original 1/227 calculation.
+  Its `PARAMETERS.json` describes that base calculation, not the new result.
+- `verifiers/phase_runs.mjs` checks the finite nonzero-phase matching-run
+  table by direct codeword-factor set comparisons.
+- `verifiers/direct_bound.py` checks the common prefix and suffix, computes
+  alignment capacities recursively, and evaluates the supported deletion
+  volumes with exact rational upper bounds.
+- `verifiers/independent_direct_bound.py` uses an iterative capacity table,
+  deletion-deficit enumeration, and the independent base arithmetic engine.
+- `verifiers/batched_oracle.py` is a small reference implementation of the
+  cached event detector. Its tests compare every cache entry with exhaustive
+  LCS detection after block updates. It is not a production string generator
+  or an empirical benchmark of the asymptotic running time.
 
-```text
-verify.py          verification entry point
-PARAMETERS.json    parameters for the denominator-227 estimates
-inputs/           the 952 length-54 codewords
-certificates/     deletion certificates and circle-boundary templates
-verifiers/        verification programs
-SOURCE.md         codebook reference and extraction
-CITATION.cff      citation information
-```
+The new calculation uses denominator 216, charges
+`p(a,b) exp(37(a+b)/100000 + 21/100)`, and the same excluded totals as the
+base finite-shell lemmas: odd totals 229 through 463, and 456, 462, 464.
+Totals 217, 227, and 452 are not separately excluded. The run-capacity
+restriction handles them within the event-volume calculation.
+
+There are 29,961 nonzero ordered length types through total 4,000. Including
+the rational infinite tail, the bounds are `max x < 1/6000`,
+`R0 < 364756/10^9`, and `109 R0 + R1 < 203468108/10^9`.
+The matching-run recurrence and the reduction from all interval lengths to
+the finite cutoff are mathematical arguments in the manuscript. The tests
+check their finite ingredients and selected algorithmic cases; they do not
+constitute a proof-assistant formalization of those arguments.
+
+The long-distance result and expected `O(n^2 log^3(n+2))` construction are
+proved in the manuscript from these bounds. In particular, the logarithmic
+distant-interval cutoff is not presented as a practical finite-length
+performance guarantee.
