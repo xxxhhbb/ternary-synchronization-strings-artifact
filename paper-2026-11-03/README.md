@@ -1,7 +1,6 @@
 # Codebooks and verification material for the 2026-11-03 paper
 
-This directory is a versioned companion to *Synchronization Strings over
-the Optimal Alphabet*. It separates three kinds of evidence:
+This directory is a versioned companion to *Synchronization Strings over a Ternary Alphabet*. It separates three kinds of evidence:
 
 1. published arbitrary-length preservation results, cited in the paper;
 2. executable finite checks and numerical inequalities used by the paper;

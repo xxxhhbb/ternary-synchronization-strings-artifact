@@ -19,7 +19,7 @@ python -B verify.py
 From the repository root, the convenience entry is:
 
 ```text
-python -B artifact_current/verify_current.py
+python -B verify.py
 ```
 
 Both run the same twelve current checks. `--full` is an alias for the

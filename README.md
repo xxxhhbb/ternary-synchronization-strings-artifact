@@ -1,4 +1,4 @@
-# Synchronization Strings over the Optimal Alphabet: companion material
+# Synchronization Strings over a Ternary Alphabet: companion material
 
 The current paper's codebooks, finite verifiers and supplementary Lean
 development are in [`paper-2026-11-03/`](paper-2026-11-03/README.md).

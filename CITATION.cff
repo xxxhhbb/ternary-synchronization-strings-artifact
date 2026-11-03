@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this artifact, please cite the accompanying paper."
-title: "Verification artifact for Synchronization Strings over the Optimal Alphabet"
+title: "Verification artifact for Synchronization Strings over a Ternary Alphabet"
 type: software
 authors:
   - family-names: Xu
@@ -12,6 +12,6 @@ authors:
   - family-names: Tao
     given-names: Dacheng
 repository-code: "https://github.com/xxxhhbb/ternary-synchronization-strings-artifact"
-version: 3.0.0
+version: 3.0.1
 date-released: 2026-11-03
-url: "https://github.com/xxxhhbb/ternary-synchronization-strings-artifact/tree/paper-2026-11-03"
+url: "https://github.com/xxxhhbb/ternary-synchronization-strings-artifact/tree/v3.0.1"

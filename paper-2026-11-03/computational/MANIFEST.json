@@ -16,7 +16,7 @@
     "base/verifiers/verify_phase_recognition.mjs": "78c6ce0f68737f7659764dc2a8479adfbcfefa5940abb14282f9224186a626f2",
     "base/verifiers/verify_transparent_brinkhuis.py": "f2f2d012476a0af0abf86261417b6ceab3c51d58046f61347db8bfdc98cb933e",
     "PARAMETERS.json": "96cb336a68c7d2b5b55dfc006223780e8c4787875f324afd2ac32ec18f0e0439",
-    "README.md": "2224654b65e140e4f746dc64926cd4ce55daf70783a7a0fecea3db460cdee9a1",
+    "README.md": "aca7549697b8ea5a56fc6c4ba61cd0d1ec68a84b1b1d35eb56bd1cac309e1aa4",
     "verifiers/batched_oracle.py": "691a5d6adb48407b6bdb389b3af40404435e4f3df7205828e5277f40fa26faf0",
     "verifiers/direct_bound.py": "2a94f0aaf0ee1c6e62fd9d238218788e65dfed64555e7c04aa4a55e2783369fa",
     "verifiers/independent_direct_bound.py": "5cce86c984bc6767882d5d54c5e4cff89a67318b23f4112c99395b66e4e12c11",
