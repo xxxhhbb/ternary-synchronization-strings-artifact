@@ -1,60 +1,84 @@
-# Verification for the supported-alignment strengthening
+# Synchronization Strings over the Optimal Alphabet: D=216 artifact
 
-This package accompanies *Synchronization Strings over the Optimal Alphabet*.
-It verifies the finite inputs and numerical local-lemma bounds for normalized
-edit-distance gap **1/216**, hence every synchronization parameter greater
-than **215/216** (in particular, **216/217**).
+Version 2.0.0 accompanies *Synchronization Strings over the Optimal Alphabet*,
+by Huibo Xu, Shi Fu, Youming Qiao, and Dacheng Tao.
 
-## Running the checks
+This version contains the current finite verification ingredients for:
 
-Install Python 3.11 or later and Node.js 20 or later, then run:
+- the transparent ternary parameter `2001/2002`;
+- the non-strict normalized insertion/deletion-distance gap `1/216`, hence
+  every fixed synchronization parameter `epsilon > 215/216`, including `216/217`;
+- the separately stated ternary synchronization circles of every length
+  `n >= 10008` with parameter `5201/5202`.
 
+## Run the complete verification
+
+Python 3.11 or later and Node.js 20 or later are required. Only their standard
+libraries are used. From the repository root, run:
+
+```sh
+python -B verify.py
 ```
-python verify.py
+
+This runs all twelve current finite checks. Successful completion ends with
+`D216_ALL_CHECKS_PASS`; a failed check returns a nonzero exit status.
+`--full` is an alias for this same complete replay. There is no `--skip-base`
+or earlier-parameter mode. Do not disable assertions with Python `-O`.
+
+For file-integrity checking without mathematical replay:
+
+```sh
+python -B verify.py --integrity-only
 ```
 
-Only the standard libraries are used. Any failed check exits unsuccessfully.
-The default run checks base certificate layout and coverage, runs its small
-finite checks, and recomputes the phase comparisons and both numerical
-bounds. It does not verify all deletion-certificate contents. To replay all
-base deletion-shell cases as well, run `python verify.py --full`; the base
-package reports a prior runtime of about 29 minutes. `--skip-base` runs the
-new checks alone and does not check the inherited finite-shell dependencies.
-Do not use Python's `-O` option,
-which disables assertions.
+This emits `D216_INTEGRITY_ONLY_PASS`, not the complete-verification marker.
 
-## Contents and scope
+## What is checked
 
-- `base/` preserves the earlier verification package, including codeword
-  provenance, finite-shell certificates, and its original 1/227 calculation.
-  Its `PARAMETERS.json` describes that base calculation, not the new result.
-- `verifiers/phase_runs.mjs` checks the finite nonzero-phase matching-run
-  table by direct codeword-factor set comparisons.
-- `verifiers/direct_bound.py` checks the common prefix and suffix, computes
-  alignment capacities recursively, and evaluates the supported deletion
-  volumes with exact rational upper bounds.
-- `verifiers/independent_direct_bound.py` uses an iterative capacity table,
-  deletion-deficit enumeration, and the independent base arithmetic engine.
-- `verifiers/batched_oracle.py` is a small reference implementation of the
-  cached event detector. Its tests compare every cache entry with exhaustive
-  LCS detection after block updates. It is not a production string generator
-  or an empirical benchmark of the asymptotic running time.
+1. The six-codeword square-free substitution.
+2. The elementary entropy-transfer estimates.
+3. Complete-block recognition, the border spectrum, and simultaneous flank
+   capacities for one and the same middle word.
+4. An independent direct verification of the flank and word-pair capacities.
+5. The circle phase-recognition table.
+6. The circle boundary templates.
+7. The circle local-lemma bound using exact rational arithmetic.
+8. An independent high-precision decimal check of that circle bound.
+9. The finite bounds on nonzero-phase matching runs.
+10. The D=216 direct unequal-interval bound using exact rational arithmetic.
+11. A separate implementation of that D=216 bound.
+12. The cached pair oracle, compared with exhaustive LCS detection after updates.
 
-The new calculation uses denominator 216, charges
-`p(a,b) exp(37(a+b)/100000 + 21/100)`, and the same excluded totals as the
-base finite-shell lemmas: odd totals 229 through 463, and 456, 462, 464.
-Totals 217, 227, and 452 are not separately excluded. The run-capacity
-restriction handles them within the event-volume calculation.
+The D=216 calculation uses charge slope `37/100000`, charge constant `21/100`,
+bilateral conditioning, odd exceptional totals `229..463`, and exceptional even
+totals `456,462,464`. See `PARAMETERS.json` for the finite constants.
 
-There are 29,961 nonzero ordered length types through total 4,000. Including
-the rational infinite tail, the bounds are `max x < 1/6000`,
-`R0 < 364756/10^9`, and `109 R0 + R1 < 203468108/10^9`.
-The matching-run recurrence and the reduction from all interval lengths to
-the finite cutoff are mathematical arguments in the manuscript. The tests
-check their finite ingredients and selected algorithmic cases; they do not
-constitute a proof-assistant formalization of those arguments.
+## Inputs and integrity
 
-The long-distance result and expected `O(n^2 log^3(n+2))` construction are
-proved in the manuscript from these bounds. In particular, the logarithmic
-distant-interval cutoff is not presented as a practical finite-length
-performance guarantee.
+`MANIFEST.json` pins every other distributed file by SHA-256. The canonical
+54/952 codebook is in `base/inputs/codewords_54_952.txt`, with SHA-256:
+
+```text
+a1b4b912d956419ef59a15e5d0926ce337614a438da25923e19a65485da05e28
+```
+
+`base/SOURCE.md` records the Sollami--Douglas--Liebmann source and extraction.
+`base/` contains shared inputs, the necessary circle certificate, and common
+verification modules. The two exact-arithmetic modules are implementations
+used by the current calculators, not separate reproduction entry points.
+
+## Scope
+
+The occurrence-wise square-free guarantee of the 54/952 family is a published
+theorem credited in `base/SOURCE.md`. These programs verify additional finite
+codeword properties, finite relations, numerical bounds, and the oracle test.
+The clean-block counting, alignment geometry, capacity criterion, and reductions
+covering all interval lengths remain mathematical arguments in the manuscript.
+This artifact is not a formal proof-assistant development or a production string
+generator. The oracle comparison is a correctness check, not a performance benchmark.
+
+This release replaces the earlier active verification layout. Historical files
+remain available in Git history; they are not prerequisites for this version.
+The reproducible version is:
+
+https://github.com/xxxhhbb/ternary-synchronization-strings-artifact/tree/v2.0.0

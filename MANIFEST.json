@@ -1,0 +1,31 @@
+{
+  "denominator": 216,
+  "weak_normalized_edit_gap": "1/216",
+  "strict_epsilon_range": "epsilon > 215/216",
+  "files": {
+    ".gitattributes": "0c081d18377031dca09c644b86a0cf5509c61d08961c925b5742a9d73141c81e",
+    ".gitignore": "25ad0b6a0e85192db01692989cc6450a9e792998458cadd222da722f32c97654",
+    "CITATION.cff": "476e0666ff8c9f9346018c3171b97e53ebdef9fadd361597ca47b3edd1794d66",
+    "PARAMETERS.json": "762c3f492ec93e70cd966ea2a5601e44aa201bae59e5dbd3c682cc94133728f2",
+    "README.md": "80be9a83950ac06ec835dd6aacfe6ba02aaf11c4864bdd9ed969b0e1c9bcc9e7",
+    "base/README.md": "8202d202493142401047cd4bd09f05f2b270155a8fd8b687188dffd9a6ff50f7",
+    "base/SOURCE.md": "ed69b6d760d4e9b99d015043aca46f25ee10ea11094859072ac1d9b3b8b2ec4c",
+    "base/certificates/circle_boundary_templates.json": "3e31255dd9f4344efab8c5fb1fb53b4333892fda54a494394a966581c951ac4c",
+    "base/inputs/codewords_54_952.txt": "a1b4b912d956419ef59a15e5d0926ce337614a438da25923e19a65485da05e28",
+    "base/verifiers/exact_arithmetic.py": "881544b30f3273ff8967cf68e91afbb5556a0c828bc8e7b3e1ae562946e1f055",
+    "base/verifiers/independent_exact_arithmetic.py": "75e35fca99852b68e5d5382b74d561c45df5cdcdfd4ffd1faf370517e992e989",
+    "base/verifiers/verify_circle_boundary_templates.mjs": "0bece73123c513b45523ac8b4b85fcc52e117f77c38ef5997a659a15fe021751",
+    "base/verifiers/verify_circle_lll_decimal.py": "f857f2114f34f3df0fd36870195049ba21e0f32752e7811f19602cd426219961",
+    "base/verifiers/verify_circle_lll_rational.py": "364980d9e743850ecd60d800cd2af9fbaa629be509f0bb4df8c6f4edc2166807",
+    "base/verifiers/verify_entropy_transfer.py": "1a5b1a77873fd41dc65a632fe1da8cc68f0e0939120123f001ea388c614e330d",
+    "base/verifiers/verify_phase_recognition.mjs": "78c6ce0f68737f7659764dc2a8479adfbcfefa5940abb14282f9224186a626f2",
+    "base/verifiers/verify_transparent_brinkhuis.py": "f2f2d012476a0af0abf86261417b6ceab3c51d58046f61347db8bfdc98cb933e",
+    "verifiers/batched_oracle.py": "691a5d6adb48407b6bdb389b3af40404435e4f3df7205828e5277f40fa26faf0",
+    "verifiers/direct_bound.py": "2a94f0aaf0ee1c6e62fd9d238218788e65dfed64555e7c04aa4a55e2783369fa",
+    "verifiers/independent_direct_bound.py": "5cce86c984bc6767882d5d54c5e4cff89a67318b23f4112c99395b66e4e12c11",
+    "verifiers/independent_four_seams.mjs": "cc0d1816f7cd5798d85fd61b5979de277a73997e45eea39763c2bfc7f4f66e36",
+    "verifiers/phase_runs.mjs": "6d1a69986e098b33f8e6754581a0f773e0b81083738869e169d89c90853f87a5",
+    "verifiers/verify_seam_capacities.py": "aa5be3b35e7f7d50d1f60f0865afaaf4284a60f37305593dbe623700fdd3559a",
+    "verify.py": "cb06009e94886d14b3677e37d44fdd98f818a5ec1f9099721bda2e420428ef39"
+  }
+}

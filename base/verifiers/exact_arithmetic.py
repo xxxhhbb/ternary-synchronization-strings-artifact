@@ -1,4 +1,4 @@
-"""Primary exact-rational replay of the denominator-227 LLL calculation.
+"""Shared exact-rational arithmetic for the current D=216 verifier.
 
 The release entry point supplies the finite shells and charge parameters
 fixed in the paper.  The verifier independently reconstructs all finite
@@ -17,10 +17,10 @@ from pathlib import Path
 
 K = 952
 M = 54
-DEFAULT_D = 227
+DEFAULT_D = 216
 FINITE_END = 4000
-ALPHA = Fraction(51, 100000)
-BETA = Fraction(3, 10)
+ALPHA = Fraction(37, 100000)
+BETA = Fraction(21, 100)
 ROUND_SCALE = 10**30
 
 
@@ -227,4 +227,4 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit("Internal arithmetic module; run python -B verify.py from the package root.")

@@ -18,7 +18,7 @@ from pathlib import Path
 K, M = 952, 54
 END = 4200
 GRID = 10**28
-A, B = F(51, 100000), F(3, 10)
+A, B = F(37, 100000), F(21, 100)
 
 
 def words(path: Path) -> list[str]:
@@ -80,7 +80,7 @@ def ceiling(value: F) -> int:
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--source", type=Path, required=True)
-    parser.add_argument("--denominator", type=int, default=227)
+    parser.add_argument("--denominator", type=int, default=216)
     parser.add_argument("--exclude-totals", default="")
     parser.add_argument("--alpha", default=str(A))
     parser.add_argument("--beta", default=str(B))
@@ -155,4 +155,4 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit("Internal arithmetic module; run python -B verify.py from the package root.")

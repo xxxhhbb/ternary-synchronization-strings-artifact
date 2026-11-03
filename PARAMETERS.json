@@ -1,12 +1,40 @@
 {
-  "normalized_edit_distance_lower_bound": "1/216",
-  "open_epsilon_threshold": "215/216",
-  "advertised_epsilon": "216/217",
-  "block_length": 54,
-  "choices_per_outer_symbol": 952,
-  "alpha": "37/100000",
-  "beta": "21/100",
-  "finite_total_cutoff": 4000,
-  "nonzero_ordered_length_types": 29961,
-  "base_parameters": "base/PARAMETERS.json"
+  "transparent_epsilon": "2001/2002",
+  "computer_assisted_weak_normalized_edit_gap": "1/216",
+  "strict_epsilon_range": "every fixed epsilon > 215/216",
+  "convenient_strict_epsilon": "216/217",
+  "shell_proof": "complete-block recognition, clean-block alignment, border spectrum, two-flank capacities",
+  "recognition_tests": 50456,
+  "normalized_border_set_pairs": 63,
+  "border_spectrum": [
+    7,
+    17,
+    18,
+    24,
+    25
+  ],
+  "short_seam_phases_after_border_reduction": [
+    18,
+    25
+  ],
+  "capacity_middle_word_checks": 3808,
+  "capacity_maxima": [
+    54,
+    47,
+    24,
+    14
+  ],
+  "final_deletion_coordinates": [
+    0,
+    2
+  ],
+  "punctured_long_word_queries": 0,
+  "uses_legacy_shell_certificates": false,
+  "full_lean_formalization": false,
+  "reproduction_denominator": 216,
+  "entry_point": "verify.py",
+  "legacy_replay": false,
+  "artifact_version": "2.0.0",
+  "version_tag": "v2.0.0",
+  "repository": "https://github.com/xxxhhbb/ternary-synchronization-strings-artifact"
 }

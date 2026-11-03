@@ -6,7 +6,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 spec = importlib.util.spec_from_file_location(
-    'independent_arithmetic', ROOT / 'base/verifiers/independent_verify_d227_lll.py')
+    'independent_arithmetic', ROOT / 'base/verifiers/independent_exact_arithmetic.py')
 arithmetic = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(arithmetic)
 INF = 10**9
