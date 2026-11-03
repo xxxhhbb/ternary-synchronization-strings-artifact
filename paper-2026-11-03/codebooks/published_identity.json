@@ -1,0 +1,15 @@
+{
+  "source_url": "https://cs.uwaterloo.ca/journals/JIS/VOL19/Sollami/sollami3.pdf",
+  "source_pdf_sha256": "4c251e3e5763a8fdf86a993cf92ea03e277e4035363e7463ad78902fb417623e",
+  "source": "Journal of Integer Sequences 19 (2016), Article 16.6.7; Definition 1/example on PDF page 2; Theorem 4 and its displayed words",
+  "base_words_extracted": 476,
+  "including_reversals": 952,
+  "large_base_codebook_exact_set_match": true,
+  "six_small_words_match_displayed_example": true,
+  "canonical_large_input_sha256": "a1b4b912d956419ef59a15e5d0926ce337614a438da25923e19a65485da05e28",
+  "scope": "Exact equality of published finite word data, not a reproof of arbitrary-length preservation.",
+  "extremal_source_url": "https://cdm.ucalgary.ca/article/download/69831/54760/215200",
+  "extremal_pdf_sha256": "8629f06ef492d7a8e0c671399ed6a7711d5a059404c0abe5517c39376f22126e",
+  "extremal_base_P_Q_R_S_exact_match": true,
+  "extremal_source_location": "Published article, Section 3, printed pp. 13-14, base P,Q,R,S and substitution delta; Corollary 3.3, printed p. 14."
+}

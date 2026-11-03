@@ -1,0 +1,110 @@
+{
+  "alphabet": "abc",
+  "Q_length": 41,
+  "R_length": 52,
+  "images": [
+    {
+      "permutation": "abc",
+      "reversed": false,
+      "Q": "abacbabcacbacabacbcacbacabcbabcabacbcabcb",
+      "R": "abacabcacbacabcbabcacbacabacbcacbacabcbabcabacbcabcb",
+      "left_cap": "abacbcabcbacabacbcabcbabcacbcabcbacabacbcabcbacbc",
+      "right_cap": "acabacbabcacbacabcbacbcabacbabcacbacabcbabcacbaca"
+    },
+    {
+      "permutation": "abc",
+      "reversed": true,
+      "Q": "bcbacbcabacbabcbacabcacbcabacabcacbabcaba",
+      "R": "bcbacbcabacbabcbacabcacbcabacabcacbabcbacabcacbacaba",
+      "left_cap": "acabcacbabcbacabcacbabcabacbcabcbacabcacbabcabaca",
+      "right_cap": "cbcabcbacbcabacabcbacbcacbabcbacbcabacabcbacbcaba"
+    },
+    {
+      "permutation": "acb",
+      "reversed": false,
+      "Q": "acabcacbabcabacabcbabcabacbcacbacabcbacbc",
+      "R": "acabacbabcabacbcacbabcabacabcbabcabacbcacbacabcbacbc",
+      "left_cap": "acabcbacbcabacabcbacbcacbabcbacbcabacabcbacbcabcb",
+      "right_cap": "abacabcacbabcabacbcabcbacabcacbabcabacbcacbabcaba"
+    },
+    {
+      "permutation": "acb",
+      "reversed": true,
+      "Q": "cbcabcbacabcacbcabacbabcbacabacbabcacbaca",
+      "R": "cbcabcbacabcacbcabacbabcbacabacbabcacbcabacbabcabaca",
+      "left_cap": "abacbabcacbcabacbabcacbacabcbacbcabacbabcacbacaba",
+      "right_cap": "bcbacbcabcbacabacbcabcbabcacbcabcbacabacbcabcbaca"
+    },
+    {
+      "permutation": "bac",
+      "reversed": false,
+      "Q": "babcabacbcabcbabcacbcabcbacabacbabcacbaca",
+      "R": "babcbacbcabcbacabacbcabcbabcacbcabcbacabacbabcacbaca",
+      "left_cap": "babcacbacabcbabcacbacabacbcacbacabcbabcacbacabcac",
+      "right_cap": "bcbabcabacbcabcbacabcacbabcabacbcabcbacabacbcabcb"
+    },
+    {
+      "permutation": "bac",
+      "reversed": true,
+      "Q": "acabcacbabcabacabcbacbcacbabcbacbcabacbab",
+      "R": "acabcacbabcabacabcbacbcacbabcbacbcabacabcbacbcabcbab",
+      "left_cap": "bcbacbcabacabcbacbcabacbabcacbacabcbacbcabacbabcb",
+      "right_cap": "cacbacabcacbabcbacabcacbcabacabcacbabcbacabcacbab"
+    },
+    {
+      "permutation": "bca",
+      "reversed": false,
+      "Q": "bcbacbcabacbabcbacabacbabcacbcabcbacabcac",
+      "R": "bcbabcabacbabcacbcabacbabcbacabacbabcacbcabcbacabcac",
+      "left_cap": "bcbacabcacbabcbacabcacbcabacabcacbabcbacabcacbaca",
+      "right_cap": "babcbacbcabacbabcacbacabcbacbcabacbabcacbcabacbab"
+    },
+    {
+      "permutation": "bca",
+      "reversed": true,
+      "Q": "cacbacabcbacbcacbabcabacabcbabcabacbcabcb",
+      "R": "cacbacabcbacbcacbabcabacabcbabcabacbcacbabcabacbabcb",
+      "left_cap": "babcabacbcacbabcabacbcabcbacabcacbabcabacbcabcbab",
+      "right_cap": "acabcacbacabcbabcacbacabacbcacbacabcbabcacbacabcb"
+    },
+    {
+      "permutation": "cab",
+      "reversed": false,
+      "Q": "cacbacabcbacbcacbabcbacbcabacabcacbabcaba",
+      "R": "cacbcabcbacbcabacabcbacbcacbabcbacbcabacabcacbabcaba",
+      "left_cap": "cacbabcabacbcacbabcabacabcbabcabacbcacbabcabacbab",
+      "right_cap": "cbcacbacabcbacbcabacbabcacbacabcbacbcabacabcbacbc"
+    },
+    {
+      "permutation": "cab",
+      "reversed": true,
+      "Q": "abacbabcacbacabacbcabcbabcacbcabcbacabcac",
+      "R": "abacbabcacbacabacbcabcbabcacbcabcbacabacbcabcbacbcac",
+      "left_cap": "cbcabcbacabacbcabcbacabcacbabcabacbcabcbacabcacbc",
+      "right_cap": "babcabacbabcacbcabacbabcbacabacbabcacbcabacbabcac"
+    },
+    {
+      "permutation": "cba",
+      "reversed": false,
+      "Q": "cbcabcbacabcacbcabacabcacbabcbacbcabacbab",
+      "R": "cbcacbacabcacbabcbacabcacbcabacabcacbabcbacbcabacbab",
+      "left_cap": "cbcabacbabcacbcabacbabcbacabacbabcacbcabacbabcaba",
+      "right_cap": "cacbcabcbacabcacbabcabacbcabcbacabcacbabcbacabcac"
+    },
+    {
+      "permutation": "cba",
+      "reversed": true,
+      "Q": "babcabacbcabcbabcacbacabacbcacbacabcbacbc",
+      "R": "babcabacbcabcbabcacbacabacbcacbacabcbabcacbacabcacbc",
+      "left_cap": "cacbacabcbabcacbacabcbacbcabacbabcacbacabcbacbcac",
+      "right_cap": "abacbabcabacbcacbabcabacabcbabcabacbcacbabcabacbc"
+    }
+  ],
+  "scope": "Image and cap data for all six alphabet permutations, with and without reversal. The reversed vertices swap the P/S cap roles as in the published substitution. Allowed square-free walks are those of the published twelve-vertex Thue digraph; arbitrary vertex sequences are not claimed to work.",
+  "base_words": {
+    "P": "abacbcabcbacabacbcabcbabcacbcabcbacabacbcabcbacbc",
+    "Q": "abacbabcacbacabacbcacbacabcbabcabacbcabcb",
+    "R": "abacabcacbacabcbabcacbacabacbcacbacabcbabcabacbcabcb",
+    "S": "acabacbabcacbacabcbacbcabacbabcacbacabcbabcacbaca"
+  }
+}

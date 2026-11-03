@@ -1,0 +1,34 @@
+TernarySyncAudit.ternary_synchronization_headline_of_thue (thue : ∃ outer, OuterSquareFree outer) :
+  ∃ epsilon < 1, ∀ (n : ℕ), ∃ stream, IsEpsilonSynchronizationString stream n epsilon
+'TernarySyncAudit.ternary_synchronization_headline_of_thue' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound,
+ five_block_short_windows_have_mismatch._native.native_decide.ax_1_1]
+TernarySyncAudit.current_headline_from_equal_block_existence
+  (existence : ∀ (n : ℕ), ∃ stream, CurrentEqualBlockGap stream n) :
+  ∃ epsilon < 1, ∀ (n : ℕ), ∃ stream, IsEpsilonSynchronizationString stream n epsilon
+'TernarySyncAudit.current_headline_from_equal_block_existence' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+TernarySyncAudit.current_concrete_interval_bad_mass_lt {N start ell : ℕ} (outer : ℕ → TernarySyncAudit.Symbol)
+  (hell : 1000 < ell) (supportFits : start + 2 * ell ≤ 18 * N) :
+  uniformProductBadMass (concreteFirstInterval outer) (currentConcreteBadValues outer) < Real.exp (-9 * ↑ell / 500)
+'TernarySyncAudit.current_concrete_interval_bad_mass_lt' depends on axioms: [propext, Classical.choice, Quot.sound]
+TernarySyncAudit.current_lll_numeric_closure.{u_1} {ι : Type u_1} [DecidableEq ι] (neighbors : Finset ι)
+  (charge : ι → ℝ) (ell : ℕ) (mass : ℝ) (ellPositive : 0 < ell) (massTail : mass < Real.exp (-9 * ↑ell / 500))
+  (chargeNonnegative : ∀ i ∈ neighbors, 0 ≤ charge i) (chargeAtMostHalf : ∀ i ∈ neighbors, charge i ≤ 1 / 2)
+  (neighborSum : ∑ i ∈ neighbors, charge i < ↑ell / 490) :
+  mass < Real.exp (-↑ell / 80) * ∏ i ∈ neighbors, (1 - charge i)
+'TernarySyncAudit.current_lll_numeric_closure' depends on axioms: [propext, Classical.choice, Quot.sound]
+TernarySyncAudit.concrete_synchronization_string_abundance {n : ℕ} (hn : 756 ≤ n) (outer : ℕ → TernarySyncAudit.Symbol)
+  (outerSquareFree : OuterSquareFree outer) : Real.exp (↑n / 28) ≤ ↑(finiteSynchronizationWords n (5999 / 6000)).card
+'TernarySyncAudit.concrete_synchronization_string_abundance' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound,
+ five_block_short_windows_have_mismatch._native.native_decide.ax_1_1]
+TernarySyncAudit.concreteBounded_expected_runtime_le_explicit {N : ℕ} (positive : 0 < N)
+  (outer : ℕ → TernarySyncAudit.Symbol) (steps : ℕ) :
+  uniformExpectation (concreteBoundedRuntimeWork N outer steps) ≤ 11337408 * ↑N ^ 5
+'TernarySyncAudit.concreteBounded_expected_runtime_le_explicit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

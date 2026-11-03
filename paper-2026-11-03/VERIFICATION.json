@@ -1,0 +1,27 @@
+{
+  "date": "2026-11-03",
+  "computational_suite": {
+    "entry": "python -B computational/verify.py",
+    "exit_code": 0,
+    "checks": 12,
+    "final_marker": "D216_ALL_CHECKS_PASS",
+    "scope": "Finite ingredients and numerical estimates, not the complete analytic proof"
+  },
+  "primary_codeword_comparison": {
+    "six_word_example": true,
+    "published_476_plus_reversals_exactly_equals_952_input": true,
+    "extremal_P_Q_R_S": true,
+    "details": "codebooks/published_identity.json"
+  },
+  "lean": {
+    "toolchain": "leanprover/lean4:v4.32.2",
+    "source_module_files": 81,
+    "build_command": "lake --no-cache build",
+    "project_build_cache": "Project modules rebuilt from source using cached public dependencies",
+    "exit_code": 0,
+    "scope_check_command": "lake env lean CheckScope.lean",
+    "scope_check_exit_code": 0,
+    "scope_signatures": "lean/CHECKED_SIGNATURES.txt",
+    "notes": "Historical and current conditional results have different scopes. Some historical finite proofs use native_decide; see README and checked dependencies. No complete formalization of the paper is claimed."
+  }
+}

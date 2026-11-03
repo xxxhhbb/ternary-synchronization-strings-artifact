@@ -1,0 +1,16 @@
+import FormalAudit
+
+open TernarySyncAudit
+
+#check ternary_synchronization_headline_of_thue
+#print axioms ternary_synchronization_headline_of_thue
+#check current_headline_from_equal_block_existence
+#print axioms current_headline_from_equal_block_existence
+#check current_concrete_interval_bad_mass_lt
+#print axioms current_concrete_interval_bad_mass_lt
+#check current_lll_numeric_closure
+#print axioms current_lll_numeric_closure
+#check concrete_synchronization_string_abundance
+#print axioms concrete_synchronization_string_abundance
+#check concreteBounded_expected_runtime_le_explicit
+#print axioms concreteBounded_expected_runtime_le_explicit
